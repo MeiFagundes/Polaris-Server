@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.168
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Polaris Server", "Polaris Server\Polaris Server.csproj", "{7DC5342A-95B0-46C9-97BD-1556EEF24123}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7DC5342A-95B0-46C9-97BD-1556EEF24123}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7DC5342A-95B0-46C9-97BD-1556EEF24123}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7DC5342A-95B0-46C9-97BD-1556EEF24123}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7DC5342A-95B0-46C9-97BD-1556EEF24123}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2CE13D21-ADB4-479B-9518-D41DB521E2D8}
+	EndGlobalSection
+EndGlobal
