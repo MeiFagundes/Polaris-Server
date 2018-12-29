@@ -2,21 +2,21 @@
 
 
 
-**Polaris Server** is an API that allows the usage of the **Polaris Core** application via HTTP requests.
+**Polaris Server** is an API that allows the usage of the **PolarisCore** cognition capabilities via HTTP requests.
 
 
 
 **How to use it:**
 
-- Process an Input Query: *[domain]/Cognize/[input query here]*
+- To process an Input Query: *[domain]/Cognize/[input query here]*
 
 **How to set it up:**
 
-1. Provide a Polaris Core Binary under *Polaris Server/PolarisBinaries/*
+1. Provide a PolarisCore Binary under */Polaris Server/PolarisCoreBinary/*
 
-   Latest binaries: https://github.com/MeiFagundes/Polaris-Core/releases
+   Latest binaries: https://github.com/MeiFagundes/PolarisCore/releases
 
-2. Name the file "POLARIS.exe".
+2. The naming is not relevant, but make sure it's the only .exe file in the directory.
 
 3. Deploy via Visual Studio.
 

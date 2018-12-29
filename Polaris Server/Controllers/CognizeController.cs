@@ -22,7 +22,14 @@ public class CognizeController : Controller {
         [HttpGet("{query}")]
         public async Task<string> Get(String query) {
 
-            String filename = Path.Combine(Environment.CurrentDirectory + @"\PolarisBinaries\", "POLARIS.exe");
+            // Getting first .exe file from /PolarisCoreBinary/
+            DirectoryInfo di = new DirectoryInfo(Environment.CurrentDirectory + @"\PolarisCoreBinary\");
+
+            String filename = di.ToString() + di.GetFiles()
+              .Select(t => t.Name)
+              .FirstOrDefault(name => name.EndsWith(".exe"));
+
+            // Executing process
             Process process = new Process();
             
             process.StartInfo.FileName = filename;
@@ -30,9 +37,7 @@ public class CognizeController : Controller {
             process.StartInfo.RedirectStandardOutput = true;
             process.Start();
 
-            string output = await process.StandardOutput.ReadToEndAsync();
-            process.WaitForExit();
-            return output;
+            return await process.StandardOutput.ReadToEndAsync();
         }
 
         // POST Cognize
