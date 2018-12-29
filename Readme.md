@@ -24,7 +24,7 @@
 
 1. Provide a PolarisCore Binary under */Polaris Server/PolarisCoreBinary/*
 
-   Latest binaries: https://github.com/MeiFagundes/PolarisCore/releases
+   Latest binaries: https://github.com/MeiFagundes/Polaris-Core/releases
 
 2. The naming is not relevant, but make sure it's the only .exe file in the directory.
 
