@@ -10,6 +10,16 @@
 
 - To process an Input Query: *[domain]/Cognize/[input query here]*
 
+  - The output will be a JSON with three fields.
+
+    - Example: 
+
+      *[domain]/Cognize/***Search about cute kittens please***
+
+      ```json
+      {"Code":2,"Response":"Alright! Searching 'cute kittens' for you.","ResponseData":"cute kittens"}
+      ```
+
 **How to set it up:**
 
 1. Provide a PolarisCore Binary under */Polaris Server/PolarisCoreBinary/*
