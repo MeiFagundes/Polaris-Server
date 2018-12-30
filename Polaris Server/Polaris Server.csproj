@@ -5,7 +5,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="PolarisCoreBinary\" />
     <Folder Include="wwwroot\" />
   </ItemGroup>
 
@@ -19,5 +18,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
     </EmbeddedResource>
   </ItemGroup>
+
+  <Target Name="PreBuild" BeforeTargets="PreBuildEvent">
+    <Exec Command="XCOPY &quot;$(SolutionDir)Polaris Server\PolarisCoreBinary&quot; &quot;$(TargetDir)\PolarisCoreBinary\&quot; /S /Y" />
+  </Target>
 
 </Project>

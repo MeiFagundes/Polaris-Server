@@ -15,7 +15,7 @@ public class CognizeController : Controller {
         // GET: Cognize/
         [HttpGet]
         public string Get() {
-            return "Query empty.";
+            return "Query is empty.";
         }
 
         // GET Cognize/Do this
@@ -23,9 +23,9 @@ public class CognizeController : Controller {
         public async Task<string> Get(String query) {
 
             // Getting first .exe file from /PolarisCoreBinary/
-            DirectoryInfo di = new DirectoryInfo(Environment.CurrentDirectory + @"\PolarisCoreBinary\");
+            DirectoryInfo directoryInfo = new DirectoryInfo(Environment.CurrentDirectory + @"\PolarisCoreBinary\");
 
-            String filename = di.ToString() + di.GetFiles()
+            String filename = directoryInfo.ToString() + directoryInfo.GetFiles()
               .Select(t => t.Name)
               .FirstOrDefault(name => name.EndsWith(".exe"));
 
@@ -37,7 +37,9 @@ public class CognizeController : Controller {
             process.StartInfo.RedirectStandardOutput = true;
             process.Start();
 
-            return await process.StandardOutput.ReadToEndAsync();
+            String output = await process.StandardOutput.ReadToEndAsync();
+            process.WaitForExit();
+            return output;
         }
 
         // POST Cognize
